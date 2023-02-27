@@ -1,13 +1,208 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+* {
+	 box-sizing: border-box;
+}
+ html {
+	 font-family: 'Doppio One', sans-serif;
+}
+ body {
+	 line-height: 1.5;
+	 margin: 0;
+	 position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.tag{
+   width: 100%;
+	 height: 10vh;
+	 display: flex;
+   position: absolute;
+   top: 50px;
+   margin-left: 20px;
+	 flex-wrap: wrap;
+	 background-color: #000;
+}
+
+.tag img{
+   display: flex;
+	 position:relative;
+   padding: 0px;
+	 height: 15px;
+	 width: 15px;
+   margin-left: 10px;
+   margin-top: 10px;
+	 border-radius: 50%;
+	 border: 1px solid #000;
+	 background: linear-gradient(0deg, rgba(0, 55, 255, 0.1) 0%, rgba(0, 55, 255, 0.1) 100%);
+	 backdrop-filter: blur(50px);
+	 border-style: outset;
+}
+
+.tag .text{
+  font-family: 'Tomorrow';
+  font-style: normal;
+  margin-left: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: #ECF0FF;
+  opacity: 0.9;
+  
+}
+
+ .trading_list {
+	 width: 100%;
+	 height: 100vh;
+	 display: flex;
+	 flex-wrap: wrap;
+	 background-color: #000;
+}
+ .item-card {
+	 align-items: center;
+	 display: flex;
+	 flex-direction: column;
+	 padding: 0;
+	 width: 17%;
+	 height: 400px;
+	 margin: 20px;
+	 margin-top: 10%;
+	 background-color: #132136;
+	 border-radius: 12px;
+	 justify-content: space-between;
+	 background: linear-gradient(0deg, rgba(108, 118, 153, 0.1) 0%, rgba(237, 240, 244, 0.1) 100%);
+	 backdrop-filter: blur(50px);
+}
+ .item-card .circle {
+	 display: flex;
+	 position:relative;
+   padding: 20px;
+	 height: 100px;
+	 width: 100px;
+	 border-radius: 50%;
+	 border: 10px solid #000;
+	 margin-top: -50px;
+	 background: linear-gradient(0deg, rgba(0, 55, 255, 0.1) 0%, rgba(0, 55, 255, 0.1) 100%);
+	 backdrop-filter: blur(50px);
+	 border-style: outset;
+}
+
+ .item-card .name {
+	 font-family: 'Tomorrow';
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 15px;
+	 line-height: 31px;
+	 text-align: center;
+	 color: #737bae;
+	 opacity: 0.9;
+	 white-space: nowrap;
+	 overflow-x: hidden;
+}
+
+ .item-card .stock {
+	 box-sizing: border-box;
+	 width: 90%;
+	 height: 40px;
+	 background: #14172b;
+	 border-radius: 17px;
+	 padding-top: 7px;
+   padding-left: 40px;
+	 font-style: normal;
+   text-align: center;
+   font-weight: 600;
+	 font-size: 16px;
+	 color: #ecf0ff;
+	 opacity: 0.9;
+}
+
+.item-card .value {
+  display: inline;
+  box-sizing: border-box;
+  width: 90%;
+  height: 40px;
+  border-radius: 17px;
+  margin-right: 20px;
+  font-family: 'Tomorrow';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ecf0ff;
+  opacity: 0.9;
+}
+
+ .item-card .stock span {
+	 font-family: 'Tomorrow';
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 12px;
+   margin-left: auto;
+	 text-transform: uppercase;
+	 color: #ff4d4d;
+	 opacity: 0.9;
+}
+
+ .item-card .price_label {
+	 font-family: 'Tomorrow';
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 12px;
+	 line-height: 31px;
+	/* identical to box height, or 258% */
+	 text-align: center;
+	 color: #5a5f7d;
+	 opacity: 0.9;
+}
+
+ .item-card .price {
+	 box-sizing: border-box;
+	 width: 90%;
+	 height: 40px;
+	 background: #14172b;
+	 border-radius: 17px;
+	 font-family: 'Tomorrow';
+	 padding-top: 7px;
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 16px;
+	 text-align: center;
+	 color: #ecf0ff;
+	 opacity: 0.9;
+}
+
+ .item-card .tvl {
+	 width: 241px;
+	 height: 31px;
+	 font-family: 'Tomorrow';
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 12px;
+	 line-height: 31px;
+	 text-align: center;
+	 color: #5a5f7d;
+	 opacity: 0.9;
+}
+
+ .item-card .pop_pairs {
+   display: flex;
+   flex-direction: row;
+	 position: relative;
+	 width: 130px;
+	 height: 40px;
+   align-items: center;
+	 background: #14172b;
+	 justify-content: space-between;
+	 border-radius: 29.5px;
+}
+
+.item-card .pop_pairs .incircle {
+   display: flex;
+	 position:relative;
+   padding: 0px;
+	 height: 30px;
+	 width: 30px;
+	 border-radius: 50%;
+	 border: 1px solid #000;
+	 background: linear-gradient(0deg, rgba(0, 55, 255, 0.1) 0%, rgba(0, 55, 255, 0.1) 100%);
+	 backdrop-filter: blur(50px);
+	 border-style: outset;
 }
